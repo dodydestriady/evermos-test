@@ -2,10 +2,12 @@
 
 namespace Tests\Unit;
 
+use App\Models\Sale;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Schema;
 use Tests\TestCase;
+use App\Repositories\SaleRepository;
 
 class SaleTest extends TestCase
 {
@@ -22,12 +24,25 @@ class SaleTest extends TestCase
 
     public function test_create_sale()
     {
-        $sale = Sale::new();
-        $sale->code = $this->faker->randomNumber(1000, 9999);
-        $sale->amount = 5000;
-        $sale->user_id = 1;
-        $sale->save();
+        $params = [
+            'code' => 'P123',
+            'amount' => 10000,
+            'user_id' => 1
+        ];
+
+        $sale = new SaleRepository();
+        $sale->create($params);
 
         $this->assertDatabaseHas('sales', $sale);
+    }
+
+    public function test_has_many_details()
+    {
+
+    }
+
+    public function test_user_belongs_to_user()
+    {
+
     }
 }

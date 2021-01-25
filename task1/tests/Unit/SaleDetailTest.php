@@ -19,4 +19,19 @@ class SaleDetailTest extends TestCase
             ])
         );
     }
+
+    public function test_create()
+    {
+
+    }
+
+    public function test_product_belongs_to_product()
+    {
+
+    }
+
+    public function test_sale_belongs_to_sale()
+    {
+        
+    }
 }
