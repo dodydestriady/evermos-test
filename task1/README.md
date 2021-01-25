@@ -11,10 +11,12 @@ Persyaratan
 
 Cara Instalasi
 
-` git clone https://gitub.com/dodydestriady/evermos-test.git
-` cd evermos-test/task1
-` config database dengan mencopy env.example menjadi .env
-` composer install
-` php artisan migrate
-` php artisan serve
-`
+``` 
+ git clone https://gitub.com/dodydestriady/evermos-test.git
+ cd evermos-test/task1
+ config database dengan mencopy env.example menjadi .env
+ composer install
+ php artisan migrate
+ php artisan serve 
+```
+
